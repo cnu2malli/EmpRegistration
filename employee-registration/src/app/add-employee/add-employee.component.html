@@ -1,0 +1,58 @@
+
+<div class="container">
+<div class="col-md-6">
+  <h2 class="text-center">Add Employee</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div>
+
+    <label class="row">Gender:</label>
+  <div class="form-group"> 
+       <div class="col-sm-3">
+            <label class="radio-inline">
+                 <input name="gender" id="input-gender-male" value="Male" type="radio"  checked/>Male
+             </label>
+        </div>
+        <div class="col-sm-3">
+             <label class="radio-inline">
+                  <input name="gender" id="input-gender-female" value="Female" type="radio" />Female
+             </label>
+         </div>
+   </div>
+   <label class="row">Date of Birth</label>
+   
+   <div class="row">
+    <div class="col-xs-12 col-12 col-md-12 form-group">
+      <input type="text"
+             placeholder="Datepicker"
+             class="form-control"
+             bsDatepicker>
+    </div>  
+  </div>
+  <label class="row">DepartMent:</label>
+  <div class="btn-group col-md-12" dropdown>
+  <button id="button-basic" dropdownToggle type="button" class="btn btn-success dropdown-toggle col-md-12"
+          aria-controls="dropdown-basic">
+    Button dropdown <span class="caret"></span>
+  </button>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+      role="menu" aria-labelledby="button-basic">
+    <li role="menuitem"><a class="dropdown-item" href="#">Developer</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#">Tester</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#">Manager</a></li>
+  </ul>
+</div>
+    
+  </form>
+  <button class="btn btn-success" id="submitbtn">Add</button>
+</div>
+</div>
+
